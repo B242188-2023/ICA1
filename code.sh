@@ -1,8 +1,9 @@
 #!/bin/bash
 
-cd /home/s2558632/ICA1/fastq
+#mkdir /home/s2558632/ICA1/fastqc_out
+cd /home/s2558632/ICA1/fastqc
 
 for data in $(ls -F -R)
 do
-echo fastqc -o ./fastqc_out -f fastq -t 10 ${data}
+fastqc -o /home/s2558632/ICA1/fastqc_out -f fastq -t 10 ${data}
 done
